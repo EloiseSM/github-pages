@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloise Saran Minozzo - Currículo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+            max-width: 800px;
+            width: 100%;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 1s ease;
+            margin-top: 2rem;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00f0ff;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #00f0ff;
+        }
+
+        .info, .section {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .section h2 {
+            color: #00f0ff;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section p, .info p {
+            margin-bottom: 0.5rem;
+        }
+
+        #verCurriculoBtn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            background: #00f0ff;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        #verCurriculoBtn:hover {
+            background: #00c3cc;
+            transform: scale(1.05);
+        }
+
+        .foto-inicial {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00f0ff;
+        }
+    </style>
+</head>
+<body>
+    <img class="foto-inicial" src="IMG-20250424-WA0132~2.jpg" alt="Eloise Saran Minozzo">
+    <button id="verCurriculoBtn">Ver meu Currículo</button>
+
+    <div class="container" id="curriculo">
+        <img src="IMG-20250424-WA0132~2.jpg" alt="Eloise Saran Minozzo">
+        <h1>Eloise Saran Minozzo</h1>
+
+        <div class="info">
+            <p><strong>Idade:</strong> 18 anos</p>
+            <p><strong>Localização:</strong> Recanto Maestro, Bloco 18, apto. 207</p>
+            <p><strong>Telefone:</strong> (55) 99601-7586</p>
+            <p><strong>Email:</strong> eloiseminozzo@gmail.com</p>
+        </div>
+
+        <div class="section">
+            <h2>Objetivo</h2>
+            <p>Busco oportunidades que promovam meu desenvolvimento profissional, permitindo a aquisição de novos conhecimentos e habilidades que possam ser aplicados de forma prática e contribuam para minha evolução contínua.</p>
+        </div>
+
+        <div class="section">
+            <h2>Formação</h2>
+            <p>Curso: Sistemas de Informação</p>
+            <p>Instituição: Antonio Meneghetti Faculdade</p>
+            <p>Ensino Médio: Instituto Estadual de Educação Guilhermina Javorski</p>
+        </div>
+
+        <div class="section">
+            <h2>Experiências</h2>
+            <p><strong>Festas Paroquiais:</strong> Colaborei em eventos comunitários desenvolvendo habilidades de trabalho em equipe, organização e atendimento ao público.</p>
+            <p><strong>Evento Internacional:</strong> Participei do Simpósio Internacional na sede da UNESCO, em Paris, comemorando os 15 anos da Fundação Antonio Meneghetti.</p>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <p>Organização, Boa comunicação, Responsabilidade, Proatividade, Criatividade, Facilidade em aprender</p>
+        </div>
+
+        <div class="section">
+            <h2>Conhecimentos Técnicos</h2>
+            <p><strong>Word:</strong> Avançado</p>
+            <p><strong>PowerPoint e Excel:</strong> Básico</p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const btn = document.getElementById('verCurriculoBtn');
+            const container = document.getElementById('curriculo');
+
+            btn.addEventListener('click', () => {
+                container.classList.add('visible');
+                btn.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
